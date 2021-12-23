@@ -1,5 +1,5 @@
 <template>
-    <button :class="{[`icon-${iconPosition}`]: true}" class="g-button"
+    <button :class="{[`icon-${iconPosition}`]: true}" class="f-button"
             @click="$emit('click')">
         <f-icon v-if="icon && !loading" :name="icon" class="icon"/>
         <f-icon v-if="loading" class="loading icon" name="loading"></f-icon>
@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import fIcon from './icon'
+import fIcon from '../icon/icon'
 
 export default {
-    name: "fingerButton",
+    name: "FingerButton",
     components: {
         'f-icon': fIcon
     },
@@ -35,8 +35,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../styles/_var.scss"; // webpack 配置 scss 根目录
-.g-button {
+@import "../../styles/var"; // webpack 配置 scss 根目录
+.f-button {
   font-size: $font-size;
   height: $button-height;
   padding: 0 1em;

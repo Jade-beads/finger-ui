@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import fButton from './button'
+import fButton from './button/button'
 
 export default {
   name: 'App',
