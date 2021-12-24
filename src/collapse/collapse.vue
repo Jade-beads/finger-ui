@@ -35,11 +35,13 @@ export default {
             if (typeof this.selected === 'number' || typeof this.selected === 'string') {
                 // 必然是单选 single没用
                 this.$emit('update:selected', name)
+                this.$emit('change',name)
             }else {
                 // 有可能单选 有可能多选
                 if (this.single) {
                     let copy = []
                     this.$emit('update:selected', copy)
+                    this.$emit('change',copy)
                 }else {
                     let copy = JSON.parse(JSON.stringify(this.selected))
                     const index = copy.findIndex(v => v == name)
@@ -47,6 +49,7 @@ export default {
                         copy.splice(index,1)
                     }
                     this.$emit('update:selected', copy)
+                    this.$emit('change',copy)
                 }
             }
             this.$nextTick(() => {
@@ -57,10 +60,12 @@ export default {
             if (typeof this.selected === 'number' || typeof this.selected === 'string') {
                 // 必然是单选 single没用
                 this.$emit('update:selected', name)
+                this.$emit('change',name)
             }else {
                 if (this.single) {
                     let copy = [name]
                     this.$emit('update:selected', copy)
+                    this.$emit('change',copy)
                 }else {
                     let copy = JSON.parse(JSON.stringify(this.selected))
                     const index = copy.findIndex(v => v == name)
@@ -68,6 +73,7 @@ export default {
                         copy.push(name)
                     }
                     this.$emit('update:selected', copy)
+                    this.$emit('change',copy)
                 }
             }
             this.$nextTick(() => {

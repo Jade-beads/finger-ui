@@ -1,23 +1,39 @@
 <template>
-  <div id="app">
-<!--    <f-button icon="settings">你好</f-button>-->
-    <f-collapse :selected.sync="select" single>
-        <f-collapse-item title="首页1" name="1">首页1</f-collapse-item>
-        <f-collapse-item title="首页2" name="2">首页2</f-collapse-item>
-        <f-collapse-item title="首页3" name="3">首页3</f-collapse-item>
-    </f-collapse>
-  </div>
+    <div id="app">
+        <div class="box">
+            <f-button icon="settings" loading>加载中</f-button>
+        </div>
+        <div class="box">
+            <f-button-group>
+                <f-button icon="left">上一步</f-button>
+                <f-button>确定</f-button>
+                <f-button icon="right" icon-position="right">下一步</f-button>
+            </f-button-group>
+        </div>
+        <div class="box">
+            <f-collapse :selected.sync="select" single>
+                <f-collapse-item name="1" title="首页1">首页1</f-collapse-item>
+                <f-collapse-item name="2" title="首页2">首页2</f-collapse-item>
+                <f-collapse-item name="3" title="首页3">首页3</f-collapse-item>
+            </f-collapse>
+        </div>
+    </div>
 </template>
 
 <script>
 import fButton from './button/button'
 
 export default {
-  name: 'App',
+    name: 'App',
     data() {
-      return {
-          select:'1'
-      }
+        return {
+            select: ['1']
+        }
+    },
+    methods: {
+        changeHandler(key) {
+            console.log(key)
+        }
     }
 }
 </script>
@@ -25,5 +41,9 @@ export default {
 <style lang="scss">
 #app {
   padding: 200px;
+
+  .box {
+    margin: 20px;
+  }
 }
 </style>
