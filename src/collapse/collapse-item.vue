@@ -6,9 +6,6 @@
             </span>
             <span class="title-text">{{title}}</span>
         </div>
-<!--        <transition @before-enter="beforeEnter"-->
-<!--                    @enter="enter"-->
-<!--                    @leave="leave" :css="false">-->
         <collapse-transition>
             <div
                     class="collapse-content-wrapper"
@@ -83,43 +80,6 @@ export default {
 @import "../../styles/_var.scss";
 $grey: #ddd;
 $border-radius: 4px;
-//.site-menu-sub {
-//  padding: 0px;
-//}
-//.sub-menu-enter-active,
-//.sub-menu-leave-active {
-//  transition: all .3s ease;
-//  height: 35px; /* 这里70px为menu-one子菜单的高度 */
-//}
-//.sub-menu-enter,
-//.sub-menu-leave-to
-//{
-//  opacity: 0;
-//  height: 0px;
-//}
-//.slide-down-enter {
-//  transition: all 250ms;
-//}
-//.slide-down-enter-active {
-//  animation: slide-down 2s;
-//}
-//.slide-down-leave-active {
-//  animation: slide-down 2s;
-//}
-//@keyframes slide-down {
-//  0% {
-//    height: 0;
-//  }
-//  100% {
-//    height: auto;
-//  }
-//}
-//.slide-down-enter-active,.slide-down-leave-active {
-//  transition: all 300ms linear;
-//}
-//.slide-down-enter,.slide-down-leave-to {
-//  height: 0;
-//}
 .collapseItem {
   > .title { border: 1px solid $grey; margin-top: -1px; margin-left: -1px; margin-right: -1px;
     min-height: 32px; display: flex; align-items: center; padding: 0 8px;
