@@ -6,7 +6,7 @@
 
 <script>
   export default {
-    name: 'GuluFooter'
+    name: 'FingerFooter'
   }
 </script>
 

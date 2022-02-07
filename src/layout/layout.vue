@@ -5,7 +5,7 @@
 </template>
 <script>
   export default {
-    name: 'GuluLayout',
+    name: 'FingerLayout',
     data () {
       return {
         layoutClass: {

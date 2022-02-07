@@ -8,7 +8,7 @@
 </template>
 <script>
   export default {
-    name: 'GuluSider',
+    name: 'FingerSider',
     data () {
       return {
         visible: true
