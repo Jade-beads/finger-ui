@@ -17,6 +17,12 @@
                 <f-collapse-item name="3" title="首页3">首页3</f-collapse-item>
             </f-collapse>
         </div>
+        <div class="box">
+            <f-input></f-input>
+            <f-input value="中文"></f-input>
+            <f-input value="中文" disabled></f-input>
+            <f-input value="中文" readonly></f-input>
+        </div>
     </div>
 </template>
 

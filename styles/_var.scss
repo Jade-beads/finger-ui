@@ -9,18 +9,28 @@ $button-height: 32px;
 $color: #333;
 $light-color: #666;
 $font-size: 14px;
-$small-font-size: 12px;
+$font-size-small: 12px;
 $input-height: 32px;
 $red: #F1453D;
 $grey: #eee;
 $blue: #4a90e2;
+$input-height: 32px;
+$height: 32px;
+
 .box-shadow {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 }
+
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
 @mixin spin {
   animation: spin 2s infinite linear;
 }
