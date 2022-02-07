@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="box">
-            <f-button icon="settings" loading>加载中</f-button>
+            <f-button icon="settings" @click="$toast('点击弹出提示')" loading>加载中</f-button>
         </div>
         <div class="box">
             <f-button-group>
@@ -22,16 +22,15 @@
 
 <script>
 import fButton from './button/button'
-
 export default {
     name: 'App',
-    data() {
+    data () {
         return {
             select: ['1']
         }
     },
     methods: {
-        changeHandler(key) {
+        changeHandler (key) {
             console.log(key)
         }
     }
@@ -40,10 +39,10 @@ export default {
 
 <style lang="scss">
 #app {
-  padding: 200px;
+    padding: 200px;
 
-  .box {
-    margin: 20px;
-  }
+    .box {
+        margin: 20px;
+    }
 }
 </style>

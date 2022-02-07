@@ -5,12 +5,14 @@ import fButtonGroup from './button/button-group'
 import fCollapse from './collapse/collapse'
 import fCollapseItem from './collapse/collapse-item'
 import fIcon from './icon/icon'
+import plugin from './plugin'
+Vue.use(plugin)
 Vue.config.productionTip = false
-Vue.component('f-collapse',fCollapse)
-Vue.component('f-collapse-item',fCollapseItem)
-Vue.component('f-icon',fIcon)
-Vue.component('f-button',fButton)
-Vue.component('f-button-group',fButtonGroup)
+Vue.component('f-collapse', fCollapse)
+Vue.component('f-collapse-item', fCollapseItem)
+Vue.component('f-icon', fIcon)
+Vue.component('f-button', fButton)
+Vue.component('f-button-group', fButtonGroup)
 new Vue({
   render: h => h(App),
 }).$mount('#app')
