@@ -62,6 +62,9 @@
                 @update:selected="selected=$event"
             ></f-cascader>
         </div>
+        <div class="box">
+            <f-pager :total-page="10" :current-page.sync="currentPage"></f-pager>
+        </div>
     </div>
 </template>
 
@@ -268,7 +271,8 @@ export default {
                     name: '组件交互文档'
                 }]
             }],
-            sildeSelected: '1'
+            sildeSelected: '1',
+            currentPage: 1,
         }
     },
     methods: {
