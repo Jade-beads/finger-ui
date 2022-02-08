@@ -1,6 +1,19 @@
 <template>
     <div id="app">
         <div class="box">
+            <f-slides :selected.sync="sildeSelected">
+                <f-slides-item name="1">
+                    <div class="box-item">1</div>
+                </f-slides-item>
+                <f-slides-item name="2">
+                    <div class="box-item">2</div>
+                </f-slides-item>
+                <f-slides-item name="3">
+                    <div class="box-item">3</div>
+                </f-slides-item>
+            </f-slides>
+        </div>
+        <div class="box">
             <f-button icon="settings" @click="$toast('点击弹出提示')" loading>加载中</f-button>
         </div>
         <div class="box">
@@ -254,7 +267,8 @@ export default {
                     value: 'jiaohu',
                     name: '组件交互文档'
                 }]
-            }]
+            }],
+            sildeSelected: '1'
         }
     },
     methods: {
@@ -272,5 +286,14 @@ export default {
     .box {
         margin: 20px;
     }
+}
+.box-item {
+    height: 300px;
+    background: blue;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 </style>
