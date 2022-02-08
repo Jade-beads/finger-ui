@@ -24,10 +24,15 @@
             </f-button-group>
         </div>
         <div class="box">
-            <f-collapse :selected.sync="select" single>
+            <f-collapse :selected.sync="select">
                 <f-collapse-item name="1" title="首页1">首页1</f-collapse-item>
                 <f-collapse-item name="2" title="首页2">首页2</f-collapse-item>
                 <f-collapse-item name="3" title="首页3">首页3</f-collapse-item>
+            </f-collapse>
+            <f-collapse :selected.sync="selectSingle" single>
+                <f-collapse-item name="4" title="首页1">首页1</f-collapse-item>
+                <f-collapse-item name="5" title="首页2">首页2</f-collapse-item>
+                <f-collapse-item name="6" title="首页3">首页3</f-collapse-item>
             </f-collapse>
         </div>
         <div class="box">
@@ -120,6 +125,7 @@ export default {
     data () {
         return {
             select: ['1'],
+            selectSingle: [],
             selected: [],
             source: [{
                 value: 'zhinan',

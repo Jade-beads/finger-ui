@@ -11,8 +11,8 @@ module.exports = {
     }]
   ],
   themeConfig: {
-    repo: 'zyqq/wheel', // 默认是 false, 设置为 true 来启用
-    lastUpdated: 'Last Updated',
+    // repo: 'zyqq/wheel', // 默认是 false, 设置为 true 来启用
+    // lastUpdated: 'Last Updated',
     // editLinks: true,
     nav: [{
         text: '主页',
@@ -39,7 +39,25 @@ module.exports = {
       {
         title: '组件',
         collapsable: false,
-        children: []
+        children: [{
+            title: '布局组件',
+            children: [
+              '/components/button',
+            ]
+          },
+          '/components/cascader',
+          '/components/collapse',
+          '/components/grid',
+          '/components/icon',
+          '/components/input',
+          '/components/layout',
+          '/components/nav',
+          '/components/pager',
+          '/components/popover',
+          '/components/slides',
+          '/components/toast',
+          '/components/tabs'
+        ]
       },
     ]
   },
