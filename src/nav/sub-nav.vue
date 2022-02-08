@@ -94,7 +94,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'var';
+@import '../../styles/_var.scss';
 .f-sub-nav {
     position: relative;
     &:not(.vertical) {

@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-@import 'var';
+@import '../../styles/_var.scss';
 .f-nav {
     display: flex;
     border-bottom: 1px solid $grey;
