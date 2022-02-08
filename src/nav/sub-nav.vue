@@ -28,7 +28,7 @@
 
 <script>
 import ClickOutside from '../click-outside'
-import FIcon from '../icon'
+import FIcon from '../icon/icon.vue'
 export default {
     components: { FIcon },
     directives: { ClickOutside },

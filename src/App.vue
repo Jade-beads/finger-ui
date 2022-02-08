@@ -65,6 +65,51 @@
         <div class="box">
             <f-pager :total-page="10" :current-page.sync="currentPage"></f-pager>
         </div>
+        <div class="box">
+            <f-nav :selected.sync="navSelected" style=" margin: 20px;">
+                <f-nav-item name="home">首页</f-nav-item>
+                <f-sub-nav name="about">
+                    <template slot="title">关于</template>
+                    <f-nav-item name="culture">企业文化</f-nav-item>
+                    <f-nav-item name="developers">开发团队</f-nav-item>
+                    <f-sub-nav name="contacts">
+                        <template slot="title">联系方式</template>
+                        <f-nav-item name="wechat">微信</f-nav-item>
+                        <f-nav-item name="qq">QQ</f-nav-item>
+                        <f-sub-nav name="phone">
+                            <template slot="title">手机</template>
+                            <f-nav-item name="cm">移动</f-nav-item>
+                            <f-nav-item name="cu">联通</f-nav-item>
+                            <f-nav-item name="cn">电信</f-nav-item>
+                        </f-sub-nav>
+                    </f-sub-nav>
+                </f-sub-nav>
+                <f-nav-item name="hire">招聘</f-nav-item>
+            </f-nav>
+        </div>
+        <div class="box">
+            <span>侧边导航</span>
+            <f-nav :selected.sync="sildeNavselected" vertical style="width: 200px;">
+                <f-nav-item name="home">首页</f-nav-item>
+                <f-sub-nav name="about">
+                    <template slot="title">关于</template>
+                    <f-nav-item name="culture">企业文化</f-nav-item>
+                    <f-nav-item name="developers">开发团队</f-nav-item>
+                    <f-sub-nav name="contacts">
+                        <template slot="title">联系方式</template>
+                        <f-nav-item name="wechat">微信</f-nav-item>
+                        <f-nav-item name="qq">QQ</f-nav-item>
+                        <f-sub-nav name="phone">
+                            <template slot="title">手机</template>
+                            <f-nav-item name="cm">移动</f-nav-item>
+                            <f-nav-item name="cu">联通</f-nav-item>
+                            <f-nav-item name="cn">电信</f-nav-item>
+                        </f-sub-nav>
+                    </f-sub-nav>
+                </f-sub-nav>
+                <f-nav-item name="hire">招聘</f-nav-item>
+            </f-nav>
+        </div>
     </div>
 </template>
 
@@ -273,6 +318,8 @@ export default {
             }],
             sildeSelected: '1',
             currentPage: 1,
+            navSelected: 'home',
+            sildeNavselected: 'home'
         }
     },
     methods: {

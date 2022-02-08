@@ -13,6 +13,9 @@ import FCascaderItems from './cascader/cascader-items.vue'
 import FSlides from './slides/slides.vue'
 import FSlidesItem from './slides/slides-item.vue'
 import FPager from './pager/pager.vue'
+import FNav from './nav/nav.vue'
+import FNavItem from './nav/nav-item.vue'
+import FSubNav from './nav/sub-nav.vue'
 Vue.use(plugin) // 使用toast 需要使用use方法加载插件
 Vue.config.productionTip = false
 Vue.component('f-collapse', fCollapse)
@@ -27,7 +30,9 @@ Vue.component('f-cascader-items', FCascaderItems)
 Vue.component('f-slides', FSlides)
 Vue.component('f-slides-item', FSlidesItem)
 Vue.component('f-pager', FPager)
-
+Vue.component('f-nav', FNav)
+Vue.component('f-nav-item', FNavItem)
+Vue.component('f-sub-nav', FSubNav)
 new Vue({
   render: h => h(App),
 }).$mount('#app')

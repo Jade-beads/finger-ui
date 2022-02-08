@@ -65,7 +65,7 @@ export default {
     display: flex;
     border-bottom: 1px solid $grey;
     color: $color;
-    cursor: default;
+    cursor: pointer;
     user-select: none;
     &.vertical {
         flex-direction: column;
